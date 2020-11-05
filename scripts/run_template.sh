@@ -22,13 +22,13 @@
 # You _must_ specify the partition. Rosie's default is the 'teaching'
 # partition for interactive nodes. You must use the 'batch' partition
 # to submit jobs.
-#SBATCH --partition=teaching
+#SBATCH --partition=dgx
 # The number of GPUs to request
-#SBATCH --gpus=1
+#SBATCH --gpus=2
 # The number of CPUs to request per GPU
-#SBATCH --cpus-per-gpu=8
+#SBATCH --cpus-per-gpu=16
 # Naming
-#SBATCH --output=pong_job.out
+#SBATCH --output=log.out
 #SBATCH --job-name={{BRANCH}}
 
 # Activate the anaconda environment. Must use this form in scripts.
