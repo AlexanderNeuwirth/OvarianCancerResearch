@@ -3,16 +3,17 @@
 # Written by Xander Neuwirth, January 2020
 
 # Create and descend hierarchy
-mkdir -p autojobs
+mkdir autojobs || true
 cd autojobs || exit
+bash
 
 # Clear out previous duplicate jobs
-rm -rf {{ID}}
+rm -rf test_20201104_0:5045
 
 # Pull down code
-git clone {{REMOTE}} {{ID}}
-cd {{ID}} || exit
-git checkout {{BRANCH}}
+git clone https://140.82.113.3/AlexanderNeuwirth/OvarianCancerResearch.git test_20201104_0:5045
+cd test_20201104_0:5045 || exit
+git checkout test
 
 # Schedule with SLURM
 sbatch run.sh
