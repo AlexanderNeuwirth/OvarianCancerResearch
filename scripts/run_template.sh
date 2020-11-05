@@ -43,7 +43,6 @@ python3 -m virtualenv venv
 ./venv/bin/pip3 install -r requirements.txt
 
 # Override PIL's maximum image size (must be done by modifying the library source)
-/bin/sed --help
 /bin/sed -i -e 's/MAX_IMAGE_PIXELS =/MAX_IMAGE_PIXELS = 12 */' ./venv/lib/python3.6/site-packages/PIL/Image.py
 
 ./venv/bin/python3 main.py
