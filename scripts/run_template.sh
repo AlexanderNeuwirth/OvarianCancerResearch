@@ -35,7 +35,7 @@
 #. /usr/local/anaconda3/bin/activate
 # Your job
 python3 -m pip install --user virtualenv
-python3 -m virtualenv --no-site-packages venv
+python3 -m virtualenv venv
 source ./venv/bin/activate
 pip3 install -r requirements.txt
 python3 main.py
