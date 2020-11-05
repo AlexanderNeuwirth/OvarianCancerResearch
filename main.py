@@ -14,7 +14,7 @@ print(f"{current()} Loaded imports.")
 masks = {}
 for tissue in classes:
     for set in ["train", "test"]:
-        masks[f"{tissue}_{set}"] = Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/ov-63-hd-16ca-{tissue}-{set}.bmp")
+        masks[f"{tissue}_{set}"] = np.asarray(Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/ov-63-hd-16ca-{tissue}-{set}.bmp"))
         print(f"{current()} Loaded {tissue}_{set}.")
 
 print(f"{current()} Finished loading masks.")

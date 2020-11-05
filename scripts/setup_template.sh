@@ -21,4 +21,4 @@ sbatch run.sh
 sleep 15
 
 # Hook into updates
-tail -f pong_job.out
+tail -f log.out
