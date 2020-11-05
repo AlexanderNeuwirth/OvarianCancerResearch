@@ -3,7 +3,8 @@
 # Written by Xander Neuwirth, January 2020
 
 # Create and descend hierarchy
-mkdir autojobs
+mkdir autojobs || true
+bash
 cd autojobs || exit
 
 # Clear out previous duplicate jobs
