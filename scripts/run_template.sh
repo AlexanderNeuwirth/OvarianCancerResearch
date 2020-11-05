@@ -37,7 +37,7 @@
 python3 -m pip install --user virtualenv
 python3 -m virtualenv venv
 source ./venv/bin/activate
-python -m pip install --user -r requirements.txt
-python main.py
+python3 -m pip3 install --user -r requirements.txt
+python3 main.py
 # Deactivate the anaconda environment
 # conda deactivate
