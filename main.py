@@ -11,12 +11,11 @@ def current(): return round(time.time() - start, 2)
 
 print(f"{current()} Loaded imports.")
 
-def load_masks():
-    masks = {}
-    for tissue in classes:
-        for set in ["train", "test"]:
-            masks[f"{tissue}_{set}"] = Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/ov-63-hd-16ca-{tissue}-{set}.bmp")
-            print(f"{current()} Loaded {tissue}_{set}.")
+masks = {}
+for tissue in classes:
+    for set in ["train", "test"]:
+        masks[f"{tissue}_{set}"] = Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/ov-63-hd-16ca-{tissue}-{set}.bmp")
+        print(f"{current()} Loaded {tissue}_{set}.")
 
 print(f"{current()} Finished loading masks.")
 
