@@ -5,7 +5,7 @@ from PIL import Image
 import time
 
 start = time.time()
-def current(): round(time.time() - start, 2)
+def current(): return round(time.time() - start, 2)
 
 print(f"{current()} Loaded imports.")
 
@@ -21,4 +21,4 @@ print(f"{current()} Loaded tissue mask.")
 
 p = np.array(im)
 
-print(f"{current()} Cast issue mask to array.")
+print(f"{current()} Cast tissue mask to array.")
