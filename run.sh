@@ -29,7 +29,7 @@
 #SBATCH --cpus-per-gpu=8
 # Naming
 #SBATCH --output=log.out
-#SBATCH --job-name={{BRANCH}}
+#SBATCH --job-name=retime_teaching
 
 # Activate the anaconda environment. Must use this form in scripts.
 #. /usr/local/anaconda3/bin/activate
