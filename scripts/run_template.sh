@@ -36,8 +36,12 @@
 # Your job
 python3 -m pip install --user virtualenv
 python3 -m virtualenv venv
-source ./venv/bin/activate
-pip3 install -r requirements.txt
-python3 main.py
+
+# Sourcing isn't working on the cluster with my configuration for some reason...
+# source ./venv/bin/activate
+
+./venv/bin/pip3 install -r requirements.txt
+./venv/binpython3 main.py
+
 # Deactivate the anaconda environment
 # conda deactivate
