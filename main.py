@@ -14,7 +14,7 @@ print(f"{current()} Loaded imports.")
 masks = {}
 for tissue in classes:
     for set in ["train", "test"]:
-        masks[f"{tissue}_{set}"] = np.asarray(Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/ov-63-hd-16ca-{tissue}-{set}.bmp"))
+        masks[f"{tissue}_{set}"] = np.asarray(Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/ov-63-hd-16ca-{tissue}-{set}.png"))
         print(f"{current()} Loaded {tissue}_{set}.")
 
 print(f"{current()} Finished loading masks.")
@@ -22,3 +22,5 @@ print(f"{current()} Finished loading masks.")
 OV63 = '/data/berisha_lab/ftir/with-paraffin/ov-63/hd/16ca/ov-63-hd-16ca.hdr'
 img = open_image(OV63)
 print(f"{current()} Loaded imaging file.")
+print(img.shape)
+print(masks["epithelium_train"].shape)
