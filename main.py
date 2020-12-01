@@ -15,7 +15,9 @@ masks = {}
 for tissue in classes:
     for set in ["train", "test"]:
         masks[f"{tissue}_{set}"] = np.asarray(Image.open(f"/data/berisha_lab/neuwirth/annotations-1-masks/{tissue}_{set}.png"))
-        print(masks[f"{tissue}_{set}"].flags)
+        mask = masks[f"{tissue}_{set}"]
+        mask.setflags(write=1)
+        mask[mask > 0] = 1
         print(f"{current()} Loaded {tissue}_{set}.")
 
 print(f"{current()} Finished loading masks.")
